@@ -8,18 +8,5 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = {CategoryCostClass.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
-    private static  AppDatabase database;
-    private static String DATABASE_NAME = "database";
-
-    public synchronized static AppDatabase getInstance(Context context){
-        if (database == null){
-            database = Room.databaseBuilder(context.getApplicationContext(),
-                    AppDatabase.class, DATABASE_NAME)
-                    .allowMainThreadQueries()
-                    .fallbackToDestructiveMigration()
-                    .build();
-        }
-        return database;
-    }
     public abstract DaoCategoryCostInterface costDao();
 }

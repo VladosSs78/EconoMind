@@ -59,7 +59,7 @@ public class ShopFragment extends Fragment {
         return root;
     }
 
-    @SuppressLint("NotifyDataSetChanged")
+
     private void init(){
         runnable = this::getWeb;
         secThread = new Thread(runnable);

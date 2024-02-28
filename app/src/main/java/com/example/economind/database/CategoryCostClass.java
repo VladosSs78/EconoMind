@@ -6,16 +6,12 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "categorycostclass")
 public class CategoryCostClass {
-    @PrimaryKey(autoGenerate = true
-    )
+    @PrimaryKey(autoGenerate = true)
     public long costid;
-
     @ColumnInfo(name = "category_cost_name")
     public String categoryName;
-
     @ColumnInfo(name = "category_cost_sum")
     public double categorySum;
-
     @ColumnInfo(name = "date")
     public String date;
 
