@@ -2,33 +2,68 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/PagerHome"
+    <ImageButton
+        android:id="@+id/costButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="40dp"
+        android:background="@null"
+        android:backgroundTint="@null"
+        android:backgroundTintMode="@null"
+        android:src="@drawable/btn_minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cashButton"
+        app:layout_constraintTop_toBottomOf="@+id/balance_container" />
+
+    <FrameLayout
+        android:id="@+id/balance_container"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="185dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
     <ImageButton
         android:id="@+id/cashButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="18dp"
+        android:background="@null"
         android:backgroundTint="@android:color/transparent"
         android:contentDescription="Buy"
-        android:src="@drawable/button_cash_off"
+        android:src="@drawable/button_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance_container"
+        tools:ignore="MissingClass" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transaction_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@null"
+        android:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PagerHome" />
+        app:layout_constraintTop_toBottomOf="@+id/cashButton"
+        tools:listitem="@layout/transaction_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

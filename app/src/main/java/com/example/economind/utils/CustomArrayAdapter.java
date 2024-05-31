@@ -1,17 +1,14 @@
 package com.example.economind.utils;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.economind.R;
@@ -34,7 +31,7 @@ public class CustomArrayAdapter extends RecyclerView.Adapter<CustomArrayAdapter.
     @NonNull
     @Override
     public CustomArrayAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.item, parent, false);
+        View view = LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.shop_item, parent, false);
         return new ViewHolder(view);
     }
 

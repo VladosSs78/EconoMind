@@ -1,5 +1,7 @@
 package com.example.economind;
 
+import static androidx.test.espresso.Espresso.onView;
+
 import android.content.Context;
 
 import androidx.test.platform.app.InstrumentationRegistry;
